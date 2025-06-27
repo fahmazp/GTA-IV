@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
 
 @font-face {
   /* font-family: "pricedown";
@@ -12,10 +14,15 @@ body {
   width: 100%;
   height: 100%;
   font-family: "pricedown";
+  background-color: #000000;
 }
 
 p {
         font-family: "Nothing You Could Do", cursive;
         letter-spacing: 1px;
         font-weight: 600;
+}
+
+button {
+  cursor: pointer;
 }
