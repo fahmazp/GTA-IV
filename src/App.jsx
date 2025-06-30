@@ -341,7 +341,10 @@ function App() {
           <WhatsNew/>         
           <CarouselSize/>
           <TrailerVideo/>
+
+          <div className="py-16">
           <Parallaxgta/>
+          </div>
 
           <div className="w-full my-10 bg-yellow-500 text-black py-10 sm:px-10 text-center">
             <h2 className="text-3xl sm:text-5xl font-light mb-4">Ready to Hit the Streets?</h2>
