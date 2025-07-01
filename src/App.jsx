@@ -11,6 +11,10 @@ import TextCirclePreview from "./components/animation-files/SpinningText";
 import { CarouselSize } from "./components/ImagesCarousel";
 import Parallaxgta from "./components/GTA-Parallax";
 import Footer from "./components/Footer";
+import ButtonTextChange from "./components/buttons/DownloadBtn";
+import ButtonCreative from "./components/buttons/DownloadBtn";
+import { ShimmerButtonDemo } from "./components/buttons/PreOrderBtn";
+import GTACharacters from "./components/Peoples";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
@@ -226,7 +230,7 @@ function App() {
                     <a href="#About" className="hover:text-yellow-400">
                       Overview
                     </a>
-                    <a href="#" className="hover:text-yellow-400">
+                    <a href="#characters" className="hover:text-yellow-400">
                       Characters
                     </a>
                     <a href="#" className="hover:text-yellow-400">
@@ -332,9 +336,12 @@ function App() {
                 meantime!
                 <CircleArrowDown className="size-5 inline ml-1.5 text-yellow-400" />
               </p>
-              <button className="bg-yellow-400 px-5 sm:px-10 py-3 sm:py-4 text-black mt-5 sm:mt-7 text-2xl sm:text-3xl cursor-pointer">
+              <a href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">
+              {/* <button className="bg-yellow-400 px-5 sm:px-10 py-3 sm:py-4 text-black mt-5 sm:mt-7 text-2xl sm:text-3xl">
                 Download Now
-              </button>
+              </button> */}
+              <ButtonCreative/>
+              </a>
             </div>
           </div>
 
@@ -350,18 +357,22 @@ function App() {
           <div className="w-full my-10 bg-yellow-500 text-black py-10 sm:px-10 text-center">
             <h2 className="text-3xl sm:text-5xl font-light mb-4">Ready to Hit the Streets?</h2>
             <p className="text-md sm:text-lg mb-6">Pre-order Grand Theft Auto VI now and get exclusive in-game rewards.</p>
+            <div className="flex justify-center">
               <a href="https://www.rockstargames.com/gta-v?info=order" target="_blank" rel="noopener noreferrer">
-              <button className="bg-black text-white px-8 md:px-10 py-4 rounded-full text-lg hover:scale-105 hover:bg-fuchsia-800 hover:text-zinc-950 transition-transform">
-                Pre-order Now
-              </button>
+              <ShimmerButtonDemo/>
               </a>
+            </div>
           </div>
+
+
           
         <div className="relative hidden md:block">
            <div className=" md:fixed md:top-[700px] xl:top-[64rem] md:left-[32px] z-50">
               <TextCirclePreview/>
             </div>
-          </div>
+        </div>
+
+        <GTACharacters/>
 
          {/* <Footer/>          */}
         </div>
