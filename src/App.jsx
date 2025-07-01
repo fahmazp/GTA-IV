@@ -10,6 +10,7 @@ import Gtalogo from "./components/GtaLogo";
 import TextCirclePreview from "./components/animation-files/SpinningText";
 import { CarouselSize } from "./components/ImagesCarousel";
 import Parallaxgta from "./components/GTA-Parallax";
+import Footer from "./components/Footer";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
@@ -314,10 +315,10 @@ function App() {
               />
             </div>
             <div className="rg w-full md:w-[50%] px-5 sm:px-10 py-10">
-              <h1 className="text-4xl md:text-6xl xl:text-8xl text-white">
+              <h1 className="text-4xl md:text-6xl xl:text-8xl text-white heading-shadow">
                 Still Running,
               </h1>
-              <h1 className="text-4xl md:text-6xl xl:text-8xl text-white">
+              <h1 className="text-4xl md:text-6xl xl:text-8xl text-white heading-shadow">
                 Not Hunting
               </h1>
               <p className="mt-5 sm:mt-10 text-base md:text-2xl xl:text-3xl text-white">
@@ -362,6 +363,7 @@ function App() {
             </div>
           </div>
 
+         {/* <Footer/>          */}
         </div>
       )}
     </>
