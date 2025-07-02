@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 export const ShimmerButton = React.forwardRef((
   {
     shimmerColor = "#ffffff",
-    shimmerSize = "0.05em",
+    shimmerSize = "0.15em",
     shimmerDuration = "3s",
     borderRadius = "100px",
     background = "rgba(0, 0, 0, 1)",
@@ -19,7 +19,7 @@ export const ShimmerButton = React.forwardRef((
     (<button
       style={
         {
-          "--spread": "90deg",
+          "--spread": "120deg",
           "--shimmer-color": shimmerColor,
           "--radius": borderRadius,
           "--speed": shimmerDuration,
@@ -57,9 +57,9 @@ export const ShimmerButton = React.forwardRef((
           // transition
           "transform-gpu transition-all duration-300 ease-in-out",
           // on hover
-          "group-hover:shadow-[inset_0_-6px_10px_#ffffff3f]",
+          "group-hover:shadow-[inset_0_-5px_10px_#f59e0bbb]",
           // on click
-          "group-active:shadow-[inset_0_-10px_10px_#ffffff3f]"
+          "group-active:shadow-[inset_0_-10px_10px_#f59e0bbb]"
         )} />
       {/* backdrop */}
       <div

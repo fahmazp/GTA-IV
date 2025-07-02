@@ -2,23 +2,24 @@ import { useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import "remixicon/fonts/remixicon.css";
-import { ChevronDownCircle, CircleArrowDown } from "lucide-react";
 import AboutInfo from "./components/About";
 import WhatsNew from "./components/WhatsNew";
+import { ChevronDownCircle, ChevronsDownIcon, ChevronsUpIcon, ChevronUp, CircleArrowDown, DownloadCloud } from "lucide-react";
 import TrailerVideo from "./components/Trailer";
 import Gtalogo from "./components/GtaLogo";
 import TextCirclePreview from "./components/animation-files/SpinningText";
 import { CarouselSize } from "./components/ImagesCarousel";
 import Parallaxgta from "./components/GTA-Parallax";
 import Footer from "./components/Footer";
-import ButtonTextChange from "./components/buttons/DownloadBtn";
 import ButtonCreative from "./components/buttons/DownloadBtn";
 import { ShimmerButtonDemo } from "./components/buttons/PreOrderBtn";
 import GTACharacters from "./components/Peoples";
+import GtaShop from "./components/Shop";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -31,6 +32,20 @@ function App() {
       document.body.classList.remove("overflow-hidden");
     };
   }, [isMenuOpen]);
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setShowScrollTop(true);
+    } else {
+      setShowScrollTop(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -227,19 +242,19 @@ function App() {
                     &times;
                   </button>
                   <nav className="flex flex-col gap-8 text-3xl md:text-4xl">
-                    <a href="#About" className="hover:text-yellow-400">
+                    <a href="#About" className="hover:text-yellow-400" onClick={() => setIsMenuOpen(false)}>
                       Overview
                     </a>
-                    <a href="#characters" className="hover:text-yellow-400">
+                    <a href="#characters" className="hover:text-yellow-400" onClick={() => setIsMenuOpen(false)}>
                       Characters
                     </a>
-                    <a href="#" className="hover:text-yellow-400">
+                    <a href="#" className="hover:text-yellow-400" onClick={() => setIsMenuOpen(false)}>
                       Story
                     </a>
-                    <a href="#Trailer" className="hover:text-yellow-400">
+                    <a href="#trailer" className="hover:text-yellow-400" onClick={() => setIsMenuOpen(false)}>
                       Trailer
                     </a>
-                    <a href="#" className="hover:text-yellow-400">
+                    <a href="#shop" className="hover:text-yellow-400" onClick={() => setIsMenuOpen(false)}>
                       Shop
                     </a>
                   </nav>
@@ -272,7 +287,7 @@ function App() {
               </div>
 
               <img
-                className="absolute character w-[310px] object-contain sm:w-[470px] lg:w-[420px] top-100 sm:top-80 xl:top-[80px] left-1/2 -translate-x-1/2 scale-[2] sm:scale-[2.5] md:scale-[3] rotate-[-20deg]"
+                className="absolute character w-[310px] object-contain sm:w-[400px] lg:w-[420px] top-100 sm:top-[120px] lg:top-[80px] left-1/2 -translate-x-1/2 scale-[2] sm:scale-[2.5] md:scale-[3] rotate-[-20deg]"
                 src="./DeWatermark-Photoroom-2.png"
                 alt=""
               />
@@ -313,7 +328,7 @@ function App() {
           >
             <div className="limg relative w-full md:w-1/2 h-full flex items-center justify-center">
               <img
-                className="scale-[1.1] md:scale-[1.2] max-w-full max-h-full"
+                className="absolute top-0  scale-[1.1] max-w-full max-h-full"
                 src="./imag.png"
                 alt=""
               />
@@ -354,7 +369,7 @@ function App() {
           <Parallaxgta/>
           </div>
 
-          <div className="w-full my-10 bg-yellow-500 text-black py-10 sm:px-10 text-center">
+          <div className="w-full my-10 bg-yellow-500 text-black py-14 sm:py-16 sm:px-10 text-center">
             <h2 className="text-3xl sm:text-5xl font-light mb-4">Ready to Hit the Streets?</h2>
             <p className="text-md sm:text-lg mb-6">Pre-order Grand Theft Auto VI now and get exclusive in-game rewards.</p>
             <div className="flex justify-center">
@@ -364,17 +379,29 @@ function App() {
             </div>
           </div>
 
-
+        <GTACharacters/>
+        <GtaShop/>   
           
         <div className="relative hidden md:block">
            <div className=" md:fixed md:top-[700px] xl:top-[64rem] md:left-[32px] z-50">
               <TextCirclePreview/>
             </div>
         </div>
-
-        <GTACharacters/>
-
+     
          {/* <Footer/>          */}
+
+    {showScrollTop && (
+      
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="fixed bottom-[10px] right-[14px] z-50 bg-fuchsia-500 hover:bg-purple-600/70 text-black p-1.5 rounded-full shadow-lg transition-transform hover:scale-110"
+        aria-label="Scroll to top"
+        >
+        <ChevronsUpIcon/>
+      </button>
+        
+    )}
+         
         </div>
       )}
     </>

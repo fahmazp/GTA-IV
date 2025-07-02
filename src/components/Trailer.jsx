@@ -1,6 +1,6 @@
 export default function TrailerVideo() {
   return (
-        <div className="w-full bg-black py-10 px-6 sm:px-20 text-white" id="Trailer">
+        <div className="w-full bg-black py-10 px-6 sm:px-20 text-white" id="trailer">
             <h2 className="text-white text-2xl md:text-3xl text-center">Watch the Madness</h2>
 
             <div className="w-full mt-8 px-2 md:px-5 h-[300px] sm:h-[520px] relative bg-black overflow-hidden">

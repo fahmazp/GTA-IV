@@ -16,6 +16,7 @@ body {
   height: 100%;
   font-family: "pricedown";
   background-color: #000000;
+  /* scroll-behavior: smooth; */
 }
 body {
  overflow-x: hidden;
