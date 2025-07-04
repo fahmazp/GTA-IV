@@ -40,7 +40,7 @@ const weapons = [
         {
           name: "Flamethrower",
           role: "Getaway Driver",
-          image: "/shop/sniper.png",
+          image: "/shop/Flamethrower.webp",
           description: "The Flamethrower is a weapon that has appeared in every GTA game. When bullets, shells, and explosives won't get the job done, burn it down!...",
         },                        
   ];
@@ -87,7 +87,35 @@ const vehicles = [
           v_type: "Compact car",
           description: "Asea is a compact four-door sedan in GTA. An affordable, no frills, fuel-efficient compact sedan. When 'ample headroom' is central to the marketing campaign, what you see is what you get.",
           class: "Sedan"
-        },            
+        },
+      {
+          name: "PMP 700",
+          image: "/shop/PMP700.webp",
+          v_type: "Full size car",
+          description: "The Schyster PMP 700 is a four-door sedan featured in GTA 4. It appears to be mainly based on the 2015 Chrysler 300 (LD), with headlights resembling those of its predecessor, the PMP-600, which drew inspiration from the 2004–2008 Audi A4.",
+          class: "Sedan"
+        },                    
+      {
+          name: "Burger Shot Stallion",
+          image: "/shop/BurgerShotStallion.webp",
+          v_type: "Muscle car",
+          description: "The Declasse Burger Shot Stallion is a two-door racing muscle car appearing in GTA V and, as part of the Cunning Stunts update in GTA. This classic Stallion muscle car's been imported from Liberty City to Los Santos, Get'em while they're hot.",
+          class: "Muscle"
+        },      
+      {
+          name: "Walton L35 Stock",
+          image: "/shop/WaltonL35.webp",
+          v_type: "Light truck",
+          description: "The Declasse Walton L35 Stock is a two-door pickup truck appearing in Grand Theft Auto Online, and due to appear in Grand Theft Auto 4. It's primarily based on the 1991 Chevrolet S-10, with the rear inspired by the fourth-gen Toyota Hilux.",
+          class: "Off-Road"
+        },    
+      {
+          name: "Akuma",
+          image: "/shop/Akuma.webp",
+          v_type: "Civilian motorcycle",
+          description: "The Dinka Akuma is a motorcycle featured in the GTA 4. The Akuma is mainly based on the Buell XB12S, though it features a tubular frame, much like that of a Ducati Streetfighter.",
+          class: "Motorcycles"
+        },                          
     ]
 
   return (
@@ -135,7 +163,7 @@ const vehicles = [
               className="w-full h-50 object-cover mb-4 group-hover:scale-105 transition-transform duration-300"
               />
 
-                <span className="absolute top-2 right-2 bg-indigo-700 text-xs md:text-sm px-2.5 py-0.5 rounded-full tracking-wide uppercase">
+                <span className="absolute top-2 right-2 bg-indigo-700 text-xs md:text-sm px-2.5 py-0.5 rounded-full tracking-wider uppercase">
                   {prod2.class}
                 </span>
           </div>
