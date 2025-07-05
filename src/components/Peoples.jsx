@@ -52,7 +52,7 @@ const statusColors = {
 
 
   return (
-    <section className="my-10 pt-16 px-4 text-white" id="characters">
+    <section className="my-10 pt-16 px-6 sm:px-8 text-white" id="characters">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl text-center mb-12">
           Meet the <span className="text-fuchsia-600">Characters</span>

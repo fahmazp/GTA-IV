@@ -15,6 +15,7 @@ import ButtonCreative from "./components/buttons/DownloadBtn";
 import { ShimmerButtonDemo } from "./components/buttons/PreOrderBtn";
 import GTACharacters from "./components/Peoples";
 import GtaShop from "./components/Shop";
+import MemeSection from "./components/MemeSection";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
@@ -364,6 +365,7 @@ useEffect(() => {
           <WhatsNew/>         
           <CarouselSize/>
           <TrailerVideo/>
+          <MemeSection/>
 
           <div className="py-16">
           <Parallaxgta/>

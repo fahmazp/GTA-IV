@@ -1,6 +1,6 @@
 export default function WhatsNew() {
   return (
-        <div className="w-full bg-black py-10 px-6 sm:px-20 text-white">
+        <div className="w-full bg-black py-10 px-6 sm:px-16 text-white">
             <h2 className="text-4xl sm:text-5xl  mb-10 text-center">
               What’s New in <span className="text-fuchsia-500">VI?</span>
             </h2>

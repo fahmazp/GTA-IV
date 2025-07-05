@@ -3,7 +3,7 @@ import { CarouselSize } from "./ImagesCarousel";
 
 export default function AboutInfo() {
   return (
-    <div className="w-full bg-black py-10 px-6 sm:px-20 text-white" id="About">
+    <div className="w-full bg-black py-10 px-6 sm:px-16 text-white" id="About">
       <h2 className="text-3xl md:text-5xl text-center mb-5 md:mb-7">
         Welcome to Vice City - <span className="text-fuchsia-500">Reimagined.</span>
       </h2>

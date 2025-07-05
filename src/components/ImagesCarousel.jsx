@@ -23,7 +23,7 @@ export function CarouselSize() {
   const [emblaRef] = useEmblaCarousel({ loop: true })
 
   return (
-    <div className="max-w-6xl mx-auto py-10 px-14 sm:px-20">
+    <div className="max-w-6xl mx-auto py-10 px-14 sm:px-16">
 
     <Carousel opts={{ loop: true }} className="w-full" setRef={emblaRef}>
       <CarouselContent className="-ml-4 flex">

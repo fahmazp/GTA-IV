@@ -119,7 +119,7 @@ const vehicles = [
     ]
 
   return (
-    <section className="my-10 pt-16 px-8 text-white" id="shop">
+    <section className="my-10 pt-16 px-6 sm:px-8 text-white" id="shop">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl text-center mb-12">
           <span className="text-fuchsia-600">Weapons & </span>Vehicles
@@ -150,7 +150,7 @@ const vehicles = [
 
         <div className="py-10">
         <h5 className="text-center text-3xl mb-4 text-fuchsia-500/90 underline">Vehicles</h5>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
 
         {vehicles.map((prod2, index) => (
           <div
