@@ -18,7 +18,7 @@ const GradientBarFooter = () => {
         </p>
         
       <div className="flex items-center justify-center">
-        <img src="/public/logo-1.png" className="w-20 md:w-24" alt="" />
+        <img src="/logo-1.png" className="w-20 md:w-24" alt="" />
       </div>
       <p className="text-sm md:text-base bg-gradient-to-r from-yellow-500 via-blue-500 to-indigo-100 text-transparent bg-clip-text">Loading… May 26, 2026</p>
       </div>
