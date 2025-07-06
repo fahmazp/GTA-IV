@@ -5,7 +5,7 @@ export default function Parallaxgta() {
     <div className="relative w-full md:h-[100vh] overflow-hidden">
       <Parallax speed={-20}>
         <img
-          src="/images/parallax1.png"
+          src="/images/parallaxbg.png"
           alt="Background"
           className="w-full h-full object-cover"
           loading="lazy"

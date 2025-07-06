@@ -16,6 +16,7 @@ import { ShimmerButtonDemo } from "./components/buttons/PreOrderBtn";
 import GTACharacters from "./components/Peoples";
 import GtaShop from "./components/Shop";
 import MemeSection from "./components/MemeSection";
+import GradientBarFooter from "./components/Footer";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
@@ -249,14 +250,14 @@ useEffect(() => {
                     <a href="#characters" className="hover:text-yellow-400" onClick={() => setIsMenuOpen(false)}>
                       Characters
                     </a>
-                    <a href="#" className="hover:text-yellow-400" onClick={() => setIsMenuOpen(false)}>
-                      Story
+                    <a href="#timeline" className="hover:text-yellow-400" onClick={() => setIsMenuOpen(false)}>
+                      Timeline
                     </a>
                     <a href="#trailer" className="hover:text-yellow-400" onClick={() => setIsMenuOpen(false)}>
                       Trailer
                     </a>
-                    <a href="#shop" className="hover:text-yellow-400" onClick={() => setIsMenuOpen(false)}>
-                      Shop
+                    <a href="#showcase" className="hover:text-yellow-400" onClick={() => setIsMenuOpen(false)}>
+                      Showcase
                     </a>
                   </nav>
                 </div>
@@ -396,7 +397,7 @@ useEffect(() => {
       
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-[10px] right-[14px] z-50 bg-fuchsia-500 hover:bg-purple-600/70 text-black p-1.5 rounded-full shadow-lg transition-transform hover:scale-110"
+        className="fixed bottom-[14px] right-[14px] z-50 bg-fuchsia-400 hover:bg-purple-600/70 text-black p-1.5 rounded-full shadow-lg transition-transform hover:scale-110"
         aria-label="Scroll to top"
         >
         <ChevronsUpIcon/>
@@ -404,6 +405,10 @@ useEffect(() => {
         
     )}
          
+         <section>
+          <GradientBarFooter/>
+         </section>
+
         </div>
       )}
     </>

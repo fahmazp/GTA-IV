@@ -119,7 +119,7 @@ const vehicles = [
     ]
 
   return (
-    <section className="my-10 pt-16 px-6 sm:px-8 text-white" id="shop">
+    <section className="my-10 pt-16 px-6 sm:px-8 text-white" id="showcase">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl text-center mb-12">
           <span className="text-fuchsia-600">Weapons & </span>Vehicles
